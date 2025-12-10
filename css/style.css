@@ -1,0 +1,467 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*  columnas  */
+    grid-template-rows: auto auto auto;
+    /* Filas  */
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "comunity comunity comunity"
+        "footer footer footer";
+
+    min-height: 100vh;
+    /* para ocupar toda la pantalla */
+}
+
+header {
+    text-align: center;       
+    position: relative;       
+                                
+    display: flex;            
+    grid-area: header;        
+    justify-content: center;  
+    align-items: center;      
+    background-image: url("../media/img/index/fondodepantallaparaheader.png"); 
+    background-size: cover;   
+    background-position: right; 
+    height: 70vh;           
+}
+/*LE DAMOS ESTILO AL CONTENEDOR DEL LOGO*/
+.imagenlogo {
+    position: absolute;       
+    top: 0px;                 
+    pointer-events: none;    
+}
+
+/*LE DAMOS ESTILO A LA IMAGEN DEL LOGO*/
+.imagenlogo img {
+    width: 350px;           
+    height: auto;            
+}
+
+/*LE DAMOS ESTILO AL CONTENEDOR DEL TEXTO PRINCIPAL*/
+.titulo {
+    position: absolute;       
+    top: 300px;               
+    text-align: center;       
+}
+
+/*LE DAMOS ESTILO AL TEXTO PRINCIPAL*/
+.titulo h1 {
+    font-size: 42px;          
+    font-weight: bold;        
+    color: white;           
+}
+
+/*LE DAMOS ESTILO AL CONTENEDOR DE LOS BOTONES EN LINEA*/
+.navprincipal {
+    position: absolute;       
+    bottom: 20px;             
+    left: 0;                 
+    right: 0;               
+    margin: 0 auto;           
+}
+
+/*LE DAMOS ESTILO A TODA LA FILA DE LAS OPCIONES*/
+.navprincipal ul {
+    display: inline-flex;    
+    list-style: none;         
+}
+
+/*LE DAMOS ESTILO A LOS CONTENEDORES AMARILLOS DE LAS OPCIONES*/
+.navprincipal li {
+    padding: 10px 22px;       
+    background: #f9db5e;    
+    border-radius: 20px;      
+    min-width: 140px;         
+    margin-right: 20px;      
+}
+
+/*LE DAMOS ESTILO A LOS LINKS DE LAS OPCIONES*/
+.navprincipal a {
+    text-decoration: none;    
+    color: #0A3F2D;        
+    font-weight: bold;        
+    font-size: 18px;          
+    text-align: center;      
+}
+
+/*LE DAMOS EL ESTILO A TODO EL CONJUNTO MENU, QUE SERIA LA CAJA VERDE OSCURA*/
+.menu {
+    position: absolute;           
+    top: 0px;                    
+    right: 40px;                  
+    background-color: #0A3F2D;  
+    padding: 30px;               
+    border-radius: 0 0 20px 20px; 
+}
+
+/*LE DAMOS EL ESTILO A CADA OPCIÓN DENTRO DE LA CAJA VERDE*/
+.opcionmenu {
+    background-color: #F0D54B; 
+    border-radius: 20px;         
+    display: flex;              
+    align-items: center;         
+    justify-content: center;     
+    padding: 6px 14px;           
+    margin-top: 10px;            
+}
+
+/*LUEGO, LE DAMOS EL ESTILO A LAS ETIQUETAS a, DENTRO DE CADA OPCION AMARILLA*/
+.opcionmenu a {
+    text-decoration: none;     
+    color: #0A3F2D;          
+    font-weight: bold;        
+    padding: 4px 0;            
+}
+
+
+
+/* Título principal */
+.tituloprincipal {
+    font-size: 2.4rem;
+    color: white;
+    text-align: center;
+    display: flex;    
+}
+
+.login {
+    grid-area: header;
+    background-color: #044;
+    display: flex;
+    padding: 100px 10px;
+    border-radius: 20px;
+    flex-direction: row;
+}
+
+section.login div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+section.login a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    width: 120px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: rgb(151, 151, 36);
+    color: white;
+}
+
+main {
+    grid-area: main;
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    background-color: #044;
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    text-align: center;
+    color: #044;
+}
+
+section.section-productos,
+section.section-exoticas {
+
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.section-productos img {
+    border-radius: 20px;
+}
+
+.exoticas-index img {
+    border-radius: 20px;
+}
+
+.section-productos h4 {
+    background-color: red;
+    border-radius: 10px;
+    padding: 5px;
+    position: absolute;
+    left: 260px;
+    top: 620px;
+
+}
+
+/*revisar porque creo que es un bloque lo que estoy modificando*/
+.comunidad_index {
+    grid-area: comunity;
+    display: flex;
+    background-color: rgb(151, 151, 36);
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.comunidad_index img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    border-radius: 20px;
+}
+
+.comunidad_index h3 {
+    color: #044;
+    margin-top: 0;
+    font-size: 2rem;
+    text-align: start;
+}
+
+.comunidad_index p {
+    color: black;
+    text-align: left;
+}
+
+.comunidad_index a {
+    display: inline-flex;
+    color: yellowgreen;
+    text-decoration: none;
+    background-color: #044;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+/*este boton deberia ser sticky*/
+.wpbottom img {
+    position: fixed;
+    border-radius: 50%;
+    right: 20px;
+    bottom: 30px;
+    width: 150px;
+    height: auto;
+}
+
+/* ===== FOOTER GENERAL ===== */
+footer {
+    grid-area: footer;
+    background-color: #033;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* ===== FOOTER GENERAL ===== */
+footer {
+    background-color: #033;
+    color: white;
+    padding: 50px 20px;
+    position: relative;
+}
+
+/* ===== BOTÓN FLOTANTE WHATSAPP ===== */
+.wpbottom {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    z-index: 9999;
+}
+
+.wpbottom img {
+    width: 40px;
+    height: 40px;
+}
+
+/* ===== GRID DE 3 COLUMNAS ===== */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: start;
+    position: relative;
+}
+
+/* Columnas */
+.footer-col {
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Líneas blancas entre columnas */
+.footer-col:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    opacity: 0.3;
+}
+
+/* Títulos */
+.footer-col h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* ===== Lista de enlaces columna 1 ===== */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Columna 2: mapa + texto ===== */
+.footer-map {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-copy {
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* ===== Columna 3: redes sociales ===== */
+.footer-redes {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-redes li {
+    margin-bottom: 10px;
+}
+
+.footer-redes img {
+    width: 22px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.footer-redes a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-redes a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-col:not(:last-child)::after {
+        display: none;
+    }
+}
+
+
+
+/* ===== Pagina Catálogo ===== */
+
+
+/* ===== Pagina Nosotros ===== */
+
+.nosotros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.nosotros img {
+    border-radius: 20px;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.margarita {
+    background-color: rgb(151, 151, 36);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.margarita p {
+    margin-top: 20px;
+}
+
+.tomas {
+    background-color: rgb(151, 151, 36);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.tomas p {
+    margin-top: 20px;
+}
+
+/* ===== Pagina Contacto ===== */
+.contacto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.contacto img {
+    border-radius: 20px;
+}
+
+.contacto h3 {
+    color: white
+}
+
+.contacto ul li {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.contacto ul li a {
+    text-decoration: none;
+    color: white
+}
+
+.envios {
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
