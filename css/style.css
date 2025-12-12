@@ -61,38 +61,33 @@ header {
     color: white;           
 }
 
-/*LE DAMOS ESTILO AL CONTENEDOR DE LOS BOTONES EN LINEA*/
-.navprincipal {
-    position: absolute;       
-    bottom: 20px;             
-    left: 0;                 
-    right: 0;               
-    margin: 0 auto;           
+/*LE DAMOS ESTILO AL menu*/
+
+
+.nav {
+    background-color: #033;   /* color de fondo del menú */
+    padding: 10px;
+    border-radius: 8px;
 }
 
-/*LE DAMOS ESTILO A TODA LA FILA DE LAS OPCIONES*/
-.navprincipal ul {
-    display: inline-flex;    
-    list-style: none;         
+.nav-link {
+    color: white !important;     /* color del texto */
 }
 
-/*LE DAMOS ESTILO A LOS CONTENEDORES AMARILLOS DE LAS OPCIONES*/
-.navprincipal li {
-    padding: 10px 22px;       
-    background: #f9db5e;    
-    border-radius: 20px;      
-    min-width: 140px;         
-    margin-right: 20px;      
+.nav-link:hover {
+    color: rgb(206, 206, 30) !important;   /* color al pasar el mouse */
 }
 
-/*LE DAMOS ESTILO A LOS LINKS DE LAS OPCIONES*/
-.navprincipal a {
-    text-decoration: none;    
-    color: #0A3F2D;        
-    font-weight: bold;        
-    font-size: 18px;          
-    text-align: center;      
+.nav-pills .nav-link.active {
+    background-color: rgb(206, 206, 30) !important;  /* color del botón activo */
+    color: white !important;
 }
+
+
+
+
+
+
 
 /*LE DAMOS EL ESTILO A TODO EL CONJUNTO MENU, QUE SERIA LA CAJA VERDE OSCURA*/
 .menu {
@@ -167,7 +162,7 @@ main {
     background-color: #044;
 }
 
-section h2 {
+row h2 {
     margin-top: 0;
     font-size: 2rem;
     text-align: center;
