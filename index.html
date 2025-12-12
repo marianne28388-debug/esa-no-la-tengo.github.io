@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Segunda Entrega</title>
+    <!-- Archivo CSS principal -->
+    <link rel="stylesheet" href="./css/style.css">
     
     <!-- Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Archivo CSS principal -->
-    <link rel="stylesheet" href="./css/style.css">
+    
 </head>
 
 <body>
@@ -27,18 +28,41 @@
             <h1>Boutique de plantas</h1>
         </div>
 
-        <!-- Navegación principal del sitio -->
-        <div> <!-- Contenedor para el nav -->
-            <nav class="navprincipal"> <!-- Menú principal -->
-                <ul>
-                    <li><a href="./index.html">Inicio</a></li>
-                    <li><a href="./pages/catalogo.html">Catálogo</a></li>
-                    <li><a href="./pages/nosotros.html">Nosotros</a></li>
-                    <li><a href="./pages/contacto.html">Contacto</a></li>
-                    <li><a href="./pages/comunidad.html">Comunidad</a></li>
-                </ul>
-            </nav>
-        </div>
+<!-- nav principal con boostrap -->
+ 
+        <ul class="nav nav-pills">
+  <li class="nav-item">
+    
+    <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+ 
+    <!-- Drop down de catalogo-->
+</li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="./pages/catalogo.html" role="button" aria-expanded="false">Catálogo</a>
+    
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="./pages/catalogo.html">Interior</a></li>
+      <li><a class="dropdown-item" href="./pages/catalogo.html">Exterior</a></li>
+      <li><a class="dropdown-item" href="./pages/catalogo.html">Exóticas</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="./pages/enconstruccion.html">Productos</a></li>
+    </ul>
+ 
+</li>
+  <li class="nav-item">
+    <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+  </li>
+  
+  <li class="nav-item">
+    <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+  </li>
+
+<li class="nav-item">
+    <a class="nav-link" href="./pages/contacto.html">Comunidad</a>
+  </li>
+
+
+</ul>
 
         <!-- Submenú / Login de la comunidad -->
         <div class="menu"> <!-- Contenedor de login/registro -->
@@ -54,15 +78,16 @@
 
     <!-- ========== BLOQUE 2: MAIN (Contenido principal del sitio) ========== -->
     <main>
-
-        <!-- ===== Sección Catálogo de Productos ===== -->
-        <section class="section-productos"> <!-- Sección de productos principales -->
+<div class="container">
+        
+    <!-- ===== Sección Catálogo de Productos ===== -->
+        <section class="row"> <!-- Sección de productos principales -->
             <h2>Nuestras plantas</h2>
 
             <div class="galeria-productos"> <!-- Contenedor de la galería -->
 
                 <!-- Producto 1: Adanzonii -->
-                <div class="producto-index"> <!-- Tarjeta de producto -->
+                <div class="col"> <!-- Tarjeta de producto -->
                     <img src="./media/img/index/portadamonsteraadanzonii.png" alt="Portada Monstera Adanzonii">
 
                     <div class="caja_adanzonii"> <!-- Contenedor de info + botón -->
@@ -79,10 +104,10 @@
         </section>
 
         <!-- ===== Sección Exóticas ===== -->
-        <section class="section-exoticas"> <!-- Sección de plantas exóticas -->
+        <section class="row"> <!-- Sección de plantas exóticas -->
             <h2>Nuestras Exóticas</h2>
 
-            <div class="galeria-exoticas"> <!-- Contenedor de galería -->
+            <div class=col> <!-- Contenedor de galería -->
 
                 <!-- Producto 1: Monstera variegada -->
                 <div class="exoticas-index"> <!-- Tarjeta de producto exótico -->
@@ -102,8 +127,9 @@
         </section>
 
         <!-- ===== Artículo Comunidad / Aceite de Neem ===== -->
-        <article class="comunidad_index"> <!-- Bloque informativo / Comunidad -->
-            <div class="comunidad_img"> <!-- Contenedor principal -->
+        <article class="row"> <!-- Bloque informativo / Comunidad -->
+           
+            <div class="col"> <!-- Contenedor principal -->
 
                 <img src="./media/img/index/portadaaceiteneem.png" alt="Imagen de aceite de neem">
 
@@ -123,9 +149,13 @@
 
             </div>
         </article>
-
+</div>
     </main>
 
+    
+    
+    
+    
     <!-- ========== BLOQUE 3: FOOTER (Pie de página) ========== -->
  <footer>
 
