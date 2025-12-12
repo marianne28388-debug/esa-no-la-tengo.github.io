@@ -83,6 +83,9 @@ header {
     color: white !important;
 }
 
+.nav-principal {
+    padding: 10px;
+}
 
 
 
@@ -158,11 +161,12 @@ main {
     grid-area: main;
     padding: 40px;
     display: flex;
+    flex-direction: column;
     gap: 40px;
     background-color: #044;
 }
 
-row h2 {
+.row h2 {
     margin-top: 0;
     font-size: 2rem;
     text-align: center;
